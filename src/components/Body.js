@@ -1,25 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Browse from './Browse'
-import Login from './Login'
+import Login from './login'
+import { onAuthStateChanged } from 'firebase/auth'
+import { useDispatch } from 'react-redux'
+import { addUser, removeUser } from './utils/userSlice'
+import { auth } from './utils/firebase'
 
 const Body = () => {
-
+  const dispatch = useDispatch()
   const appRouter = createBrowserRouter([
     {
-      path:'/',
-      element:<Login/>
+      path: '/',
+      element: <Login />
     },
     {
-      path:'/browse',
-      element:<Browse/>
+      path: '/browse',
+      element: <Browse />
     }
   ])
+
+
   return (
-    <div className='z-20 bg-gradient-to-b from-black'>
+    <div className='z-20'>
       <RouterProvider router={appRouter} />
-        {/* <Header/>
-        <img src='https://assets.nflxext.com/ffe/siteui/vlv3/41c789f0-7df5-4219-94c6-c66fe500590a/3149e5eb-4660-4e3d-9e65-b1e615229c64/IN-en-20240513-popsignuptwoweeks-perspective_alpha_website_medium.jpg' alt='bg Image'/> */}
+
     </div>
   )
 }

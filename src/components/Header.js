@@ -1,12 +1,61 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { onAuthStateChanged, signOut } from 'firebase/auth'
+import { auth } from './utils/firebase'
+import { useDispatch, useSelector } from 'react-redux'
+import { addUser, removeUser } from './utils/userSlice'
+import { LOGO } from './utils/constants'
 
 const Header = () => {
-  return (
-        <div className='absolute  z-20 w-full flex justify-between item-center px-40'>
-        <img className='   w-52 bg-gradient-to-b from-black'  src='https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png' alt='logo'/>
-        <button className= ' px-5 my-6 cursor-pointer rounded-lg font-medium text-white bg-red-600'>Sign Out</button>
+  const user = useSelector(store => store.user)
+  const dispatch = useDispatch()
+  const navigate = useNavigate();
 
-        </div>
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+
+        const { uid, email, displayName, photoURL } = user;
+
+        dispatch(addUser(
+          {
+            uid: uid,
+            email: email,
+            displayName: displayName,
+            photoURL: photoURL
+          }))
+
+        navigate('/browse')
+        // ...
+      } else {
+        // User is signed out
+        // ...
+        dispatch(removeUser())
+        navigate('/')
+      }
+    });
+
+    //unsubscribe when component unmount.
+    return () => unsubscribe()
+  }, [])
+
+  const signOutHandler = () => {
+    signOut(auth).then(() => {
+      // Sign-out successful.
+    }).catch((error) => {
+      // An error happened.
+      navigate('/error')
+    });
+
+    navigate('/')
+
+  }
+  return (
+    <div className="absolute bg-gradient-to-b from-black w-screen px-8 py-2 z-10 flex flex-col md:flex-row justify-between">
+      <img className="w-44 mx-auto md:mx-0 " src={LOGO} alt="logo" />
+      {user && (<button onClick={signOutHandler} className=' px-4 m-4 cursor-pointer rounded-lg font-medium text-white bg-red-600'>Sign Out</button>)}
+
+    </div>
   )
 }
 
