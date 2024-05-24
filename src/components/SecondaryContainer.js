@@ -15,9 +15,9 @@ const SecondaryContainer = () => {
 
   return (
     <div className=' bg-black text-white'>
-      <div className='relative z-30 -mt-96'>
+      <div className='relative z-30 -mt-80'>
         <MoviesList title={'Now playing'} movies={nowPlayingMovies} />
-        <MoviesList title={'popular'} movies={popularMovies} />
+        <MoviesList title={'Popular'} movies={popularMovies} />
         <MoviesList title={'Top Rated'} movies={topRatedMovies} />
         <MoviesList title={'Upcoming'} movies={upcomingMovies} />
 

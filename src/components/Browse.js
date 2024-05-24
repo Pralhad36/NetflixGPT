@@ -1,3 +1,5 @@
+import { useSelector } from 'react-redux'
+import GptSearch from './GptSearch'
 import Header from './Header'
 import MainContainer from './MainContainer'
 import SecondaryContainer from './SecondaryContainer'
@@ -8,6 +10,8 @@ import useUpcomingMovies from './hooks/useUpcomingMovies'
 
 const Browse = () => {
 
+  const toggleGptView = useSelector((store) => store?.gpt?.showGptSearch)
+
   useNowPlayingMovies()
   usePopularMovies()
   useTopRatedMovies()
@@ -17,8 +21,11 @@ const Browse = () => {
   return (
     <div className=''>
       <Header />
-      <MainContainer />
-      <SecondaryContainer />
+      {toggleGptView ? <GptSearch /> : <>
+        <MainContainer />
+        <SecondaryContainer />
+      </>}
+
       {/* {
         MainContainer
           -VideoBackground

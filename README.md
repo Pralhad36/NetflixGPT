@@ -53,3 +53,7 @@ npx tailwindcss init
 -TMDB Image CDN URL
 -Made Browse page amazing with taiwind css
 -custome hook for PopularMovie
+-GPT search page
+-GPT search bar
+-Multy Language feature in our app **\*\***\***\*\***(Bonus)
+Integrate GPT APIS

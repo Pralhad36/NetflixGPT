@@ -4,7 +4,6 @@ import MovieCard from './MovieCard'
 
 const MoviesList = ({ title, movies }) => {
 
-    console.log(movies)
     return (
         <div className='px-4'>
             <h1 className='text-2xl pt-6'>{title}</h1>
@@ -12,7 +11,7 @@ const MoviesList = ({ title, movies }) => {
             <div className='flex overflow-x-scroll no-scrollbar '>
                 <div className='flex'>
                     {movies?.map((movie) => {
-                        return <MovieCard key={movies.id} posterPath={movie.poster_path} />
+                        return <MovieCard key={movie.id} posterPath={movie.poster_path} />
                     })}
 
                 </div>
