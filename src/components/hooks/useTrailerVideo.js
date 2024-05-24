@@ -13,7 +13,7 @@ const useTrailerVideo = (movieId) => {
             API_OPTION
         );
 
-        const json = await data.json();
+        const json = await data?.json();
 
 
         const filteredData = json.results.filter(

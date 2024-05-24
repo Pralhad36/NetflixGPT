@@ -47,3 +47,9 @@ npx tailwindcss init
 -update store with trailer data
 -embaded youtube video and make it autoplay and mute
 -Tailwingd classes to make main container ausome
+-Build Secondary component
+-Build Movie list
+-Build movie card
+-TMDB Image CDN URL
+-Made Browse page amazing with taiwind css
+-custome hook for PopularMovie

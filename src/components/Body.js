@@ -22,7 +22,7 @@ const Body = () => {
 
 
   return (
-    <div className='z-20'>
+    <div className='z-20 no-scrollbar'>
       <RouterProvider router={appRouter} />
 
     </div>

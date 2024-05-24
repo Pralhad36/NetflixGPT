@@ -53,7 +53,7 @@ const Header = () => {
   return (
     <div className="absolute bg-gradient-to-b from-black w-screen px-8 py-2 z-10 flex flex-col md:flex-row justify-between">
       <img className="w-44 mx-auto md:mx-0 " src={LOGO} alt="logo" />
-      {user && (<button onClick={signOutHandler} className=' px-4 m-4 cursor-pointer rounded-lg font-medium text-white bg-red-600'>Sign Out</button>)}
+      {user && (<button onClick={signOutHandler} className=' hover:bg-opacity-60 px-4 m-4 cursor-pointer rounded-lg font-medium text-white bg-red-600'>Sign Out</button>)}
 
     </div>
   )
