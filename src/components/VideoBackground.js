@@ -18,7 +18,8 @@ const VideoBackground = ({ movieId }) => {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: "Bearer" + process.env.REACT_APP_TMDB_KEY,
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNjhlYzUwOTM4NWJjOTBhYjg3NWI5ODlmOWNjYzNjMSIsInN1YiI6IjY2NjE1OWE4NmRjMjgwM2M5YjhkN2Q4ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Osg_i22fPpliVVbXjQHvBjPjMMa__xxU26BwSeOrd-o",
     },
   };
 
@@ -50,7 +51,7 @@ const VideoBackground = ({ movieId }) => {
   }, [movieId]);
 
   return (
-    <div className=" pt-40 md:pt-0">
+    <div className=" pt-36 md:pt-0">
       {trailerVideo ? (
         <iframe
           className=" w-screen aspect-video"

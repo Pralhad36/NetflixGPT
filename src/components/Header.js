@@ -41,7 +41,7 @@ const Header = () => {
 
     //unsubscribe when component unmount.
     return () => unsubscribe();
-  }, []);
+  }, [navigate]);
 
   const signOutHandler = () => {
     signOut(auth)
@@ -52,7 +52,6 @@ const Header = () => {
         // An error happened.
         navigate("/error");
       });
-
     navigate("/");
   };
 
@@ -66,7 +65,7 @@ const Header = () => {
     console.log(e.target.value);
   };
   return (
-    <div className="absolute w-screen px-8 py-2 z-10 flex flex-col md:bg-gradient-to-b from-black to-transparent  md:flex-row justify-between">
+    <div className="bg-black md:bg-gradient-to-b from-black to-transparent absolute w-screen md:px-8 px-4 py-1 md:py-2 z-10 flex flex-col md:flex-row justify-between">
       <img className="w-44 mx-auto md:mx-0 " src={LOGO} alt="logo" />
       {user && (
         <div className=" flex justify-between">
@@ -85,14 +84,14 @@ const Header = () => {
 
           <button
             onClick={handleGptSearch}
-            className=" hover:bg-yellow-500 px-2 md:px-4 py- md:py-2 my-4 cursor-pointer rounded-md md:text-md  md:font-medium text-black bg-yellow-600 "
+            className=" hover:bg-yellow-500 px-2 md:px-4 py-2 md:py-2 cursor-pointer rounded-md md:text-md my-4  md:font-medium text-black bg-yellow-600 "
           >
             {gptSearchView ? "Home Page" : "GPT search"}
           </button>
 
           <button
             onClick={signOutHandler}
-            className=" hover:bg-red-500 px-4 m-4 cursor-pointer py-2 rounded-md font-medium text-white bg-red-600"
+            className=" hover:bg-red-500 px-2 my-4 md:px-4 md:py-2 md:m-4 cursor-pointer rounded-md font-medium text-white bg-red-600 "
           >
             Sign Out
           </button>

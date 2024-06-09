@@ -8,14 +8,16 @@ const VideoTitle = ({ title, overview }) => {
 
   console.log(trailerImage);
   return (
-    <div className="  absolute w-screen h-[120%] aspect-video pt-52 md:pt-40 px-8 md:px-14 text-white bg-gradient-to-r from-black">
-      <h1 className=" py-4 text-xl w-48 md:text-3xl md:w-4/12 font-bold">
+    <div className="  absolute w-screen h-[120%] aspect-video pt-60 md:pt-40 px-8 md:px-14 text-white bg-gradient-to-r from-black">
+      <h1 className=" py-2 text-md w-28 md:text-3xl md:w-4/12 font-bold text-gray-400">
         {title}
       </h1>
-      <p className=" hidden md:inline-block text-sm w-4/12">{overview}</p>
+      <p className=" hidden md:inline-block text-sm w-4/12 text-gray-200">
+        {overview}
+      </p>
 
       <div>
-        <button className=" px-3 py-1 md:px-11 md:py-2 bg-white bg-opacity-70 text-black md:text-lg font-bold rounded-lg mx-0 md:mx-2 my-8 hover:bg-white">
+        <button className=" px-2 py-0 md:px-11 md:py-2 bg-white bg-opacity-70 text-black md:text-lg font-bold rounded-lg mx-0 md:mx-2 mt-2  hover:bg-white">
           Play
         </button>
         <button className=" hidden md:inline-block px-7 py-2 bg-gray-500 text-white font-bold text-lg  rounded-lg  my-8 bg-opacity-50 hover:bg-opacity-80">

@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "netflixgpt-8bd2f",
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -8,3 +9,4 @@
     ]
   }
 }
+
