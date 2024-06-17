@@ -1,0 +1,35 @@
+@keyframes wipe-in {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes wipe-out {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+.text-animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.animated-text {
+    position: absolute;
+    white-space: nowrap;
+    animation: wipe-in 1.5s forwards, wipe-out 1.5s forwards 1.5s;
+}
