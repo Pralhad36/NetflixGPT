@@ -40,6 +40,13 @@ const moviesSlice = createSlice({
     addClearCast: (state, action) => {
       state.movieCasteDetails = null;
     },
+    addRemoveMovieDetails: (state, action) => {
+      state.movieDetails = null;
+      state.movieCasteDetails = null;
+      state.trailerVideo = null;
+      state.nowPlayingMovies = null;
+      state.showMovieDetail = null;
+    },
   },
 });
 
@@ -53,6 +60,7 @@ export const {
   addMovieCastDetails,
   addMovieDetails,
   addClearCast,
+  addRemoveMovieDetails,
 } = moviesSlice.actions;
 
 export default moviesSlice.reducer;

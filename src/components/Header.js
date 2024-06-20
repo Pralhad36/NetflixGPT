@@ -7,6 +7,7 @@ import { addUser, removeUser } from "./utils/userSlice";
 import { LOGO, SUPPORTED_LANGUAGES } from "./utils/constants";
 import { toggleGptSearch } from "./utils/gptSearchSlice";
 import { changeLanguage } from "./utils/configSlice";
+import { addRemoveMovieDetails, removeMovieDetails } from "./utils/moviesSlice";
 
 const Header = () => {
   const user = useSelector((store) => store.user);
@@ -53,6 +54,8 @@ const Header = () => {
         navigate("/error");
       });
     navigate("/");
+
+    dispatch(addRemoveMovieDetails());
   };
 
   const handleGptSearch = () => {

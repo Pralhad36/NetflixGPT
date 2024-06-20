@@ -3,6 +3,7 @@ import MovieCard from "./MovieCard";
 import { useSelector } from "react-redux";
 import { MOVIE_IMAGE_URL } from "./utils/constants";
 import MoviesList from "./MoviesList";
+import HorizontalScrollContainer from "./HorizontalScrollContainer";
 
 const SecondaryContainer = () => {
   const nowPlayingMovies = useSelector(
