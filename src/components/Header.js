@@ -68,7 +68,7 @@ const Header = () => {
     console.log(e.target.value);
   };
   return (
-    <div className="bg-black md:bg-gradient-to-b from-black to-transparent z-50 md:absolute fixed w-screen md:px-8 px-4 py-1 md:py-2 flex flex-col md:flex-row justify-between">
+    <div className="bg-gradient-to-b from-black to-transparent z-50 md:absolute fixed w-screen md:px-8 px-4 py-1 md:py-2 flex flex-col md:flex-row justify-between item-center">
       <img className=" w-44 mx-auto md:mx-0 " src={LOGO} alt="logo" />
       {user && (
         <div className=" flex justify-between">
@@ -87,14 +87,14 @@ const Header = () => {
 
           <button
             onClick={handleGptSearch}
-            className=" hover:bg-yellow-500 px-2 md:px-4 py-2 md:py-2 cursor-pointer rounded-md md:text-md my-4  md:font-medium text-black bg-yellow-600 "
+            className=" hover:bg-yellow-500 w-24 h-10 cursor-pointer -mt-4 md:mt-4 md:mx-2 ml-0 rounded-md md:text-md   md:font-medium text-black bg-yellow-600 "
           >
             {gptSearchView ? "Home Page" : "GPT search"}
           </button>
 
           <button
             onClick={signOutHandler}
-            className=" hover:bg-red-500 px-2 my-4 md:px-4 md:py-2 md:m-4 cursor-pointer rounded-md font-medium text-white bg-red-600 "
+            className=" hover:bg-red-500 w-20 h-10 md:mt-4 -mt-4 mr-0 md:mx-2 cursor-pointer rounded-md font-medium text-white bg-red-600 "
           >
             Sign Out
           </button>

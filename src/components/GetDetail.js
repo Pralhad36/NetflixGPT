@@ -15,11 +15,11 @@ const GetDetail = () => {
   console.log(casts);
   return (
     <>
-      <div className=" fixed flex flex-col md:flex-row justify-center w-full h-full md:h-screen pt-0 md:pt-20 md:px-14 text-white bg-black">
+      <div className=" fixed flex flex-col md:flex-row justify-center w-full h-full md:h-screen  pt-0 md:pt-20 md:px-14 text-white bg-black">
         <div className=" md:w-[50%] w-full flex flex-col">
           <button
             onClick={clearCast}
-            className="absolute z-50 mt-[25%] md:mt-4 ml-3 px-2 md:px-4 py-1 md:py-2 rounded-md p-2 font-bold hover:bg-gray-800  bg-black border border-1 w-20"
+            className="absolute z-50 mt-24 md:mt-4 ml-3 px-2 md:px-4 py-1 md:py-2 rounded-md font-bold hover:bg-gray-800  bg-black border border-1 w-20"
           >
             back
           </button>
@@ -30,7 +30,9 @@ const GetDetail = () => {
               "https://image.tmdb.org/t/p/w500/" + movieDetails?.backdrop_path
             }
           />
-          <h1 className=" font-bold text-md md:text-xl pb-1 ml-3">Casts & crews</h1>
+          <h1 className=" font-bold text-md md:text-xl pb-1 ml-3">
+            Casts & crews
+          </h1>
           <div className=" flex overflow-x-scroll no-scrollbar ">
             {casts.map((cast) => (
               <div className=" mx-3 md:mx-4 h-28 md:h-40">
@@ -49,8 +51,12 @@ const GetDetail = () => {
           <h1 className=" font-bold w-[50%] text-lg md:text-3xl absolute md:static md:mt-0 -mt-[50%]">
             {movieDetails?.title}
           </h1>
-          <h2 className="md:inline-block hidden font-bold py-2">{movieDetails?.tagline}</h2>
-          <p className=" flex md:w-full w-96 md:py-2 pt-8 ">{movieDetails?.overview}</p>
+          <h2 className="md:inline-block hidden font-bold py-2">
+            {movieDetails?.tagline}
+          </h2>
+          <p className=" flex md:w-full w-96 md:py-2 pt-8 ">
+            {movieDetails?.overview}
+          </p>
           <div className=" flex justify-between ">
             <div className=" flex flex-col ">
               <p className="font-bold md:py-6 py-4 ">
@@ -58,11 +64,10 @@ const GetDetail = () => {
               </p>
               <p>average rating: {movieDetails?.vote_average}</p>
               <p className="py-4 md:py-6">
-              Language : {movieDetails?.spoken_languages[0].english_name}
-            </p>
+                Language : {movieDetails?.spoken_languages[0].english_name}
+              </p>
             </div>
 
-            
             <p className=" py-4 text-lg">
               Genres :
               {movieDetails?.genres.map((gen) => (
