@@ -22,7 +22,7 @@ const HorizontalScrollContainer = ({ children }) => {
     <div className="relative ">
       <button
         onClick={scrollLeft}
-        className=" absolute left-0 top-32  bg-black border border-white p-2 rounded-full shadow-md z-20 focus:outline-none"
+        className=" absolute left-0 top-20  bg-black border border-white p-2 rounded-full shadow-md  focus:outline-none"
       >
         <FaChevronLeft />
       </button>
@@ -34,7 +34,7 @@ const HorizontalScrollContainer = ({ children }) => {
       </div>
       <button
         onClick={scrollRight}
-        className="absolute right-0 top-32   bg-black border border-white p-2 rounded-full shadow-md z-10 focus:outline-none"
+        className="absolute right-0 top-20   bg-black border border-white p-2 rounded-full shadow-md focus:outline-none"
       >
         <FaChevronRight />
       </button>

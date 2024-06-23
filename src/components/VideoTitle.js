@@ -67,7 +67,7 @@ const VideoTitle = ({ movieId, title, overview }) => {
 
   // const firstFiveImage = images.filter((image) => )
   return (
-    <div className="fixed z-40 md:z-10 flex flex-col   md:absolute w-screen md:h-[120%] h-96 aspect-video pt-64 md:pt-40 px-8 md:px-12 text-white bg-gradient-to-r from-black">
+    <div className="fixed z-40 md:z-10 flex flex-col   md:absolute w-screen md:h-[120%] h-[35%] aspect-video pt-44 md:pt-40 px-8 md:px-12 text-white bg-gradient-to-r from-black">
       <h1 className=" md:py-2 text-md w-28 md:text-3xl md:w-4/12 font-bold text-gray-400">
         {title}
       </h1>
@@ -81,7 +81,7 @@ const VideoTitle = ({ movieId, title, overview }) => {
         </button>
         <button
           onClick={imageHandler}
-          className="inline-block md:px-7 md:py-2 bg-gray-500 text-white font-bold md:text-lg  rounded-lg  md:my-8 bg-opacity-50 hover:bg-opacity-80"
+          className="inline-block md:px-7 px-2 md:py-2 bg-gray-500 text-white font-bold md:text-lg  rounded-lg  md:my-8 bg-opacity-50 hover:bg-opacity-80"
         >
           More Info
         </button>

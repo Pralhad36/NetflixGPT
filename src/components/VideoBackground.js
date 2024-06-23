@@ -43,7 +43,7 @@ const VideoBackground = ({ movieId }) => {
   }, [movieId]);
 
   return (
-    <div className="md:static  z-30 fixed pt-36  md:pt-0 w-screen">
+    <div className="md:static  z-30 fixed pt-20  md:pt-0 w-screen">
       {trailerVideo ? (
         <iframe
           className=" w-screen  aspect-video"

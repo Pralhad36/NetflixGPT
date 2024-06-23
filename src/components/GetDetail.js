@@ -15,7 +15,7 @@ const GetDetail = () => {
   console.log(casts);
   return (
     <>
-      <div className=" fixed flex flex-col md:flex-row justify-center w-full h-full md:h-screen  pt-0 md:pt-20 md:px-14 text-white bg-black">
+      <div className=" fixed flex flex-col md:flex-row justify-center w-full h-full md:h-screen px-2 pt-0 md:pt-20 md:px-14 text-white bg-black">
         <div className=" md:w-[50%] w-full flex flex-col">
           <button
             onClick={clearCast}
@@ -24,7 +24,7 @@ const GetDetail = () => {
             back
           </button>
           <img
-            className="md:mt-0 mt-20 md:-z-2 w-full p-2 object-cover"
+            className="md:mt-0 mt-20 md:-z-2 w-full py-1 object-cover"
             alt="image"
             src={
               "https://image.tmdb.org/t/p/w500/" + movieDetails?.backdrop_path
@@ -35,10 +35,10 @@ const GetDetail = () => {
           </h1>
           <div className=" flex overflow-x-scroll no-scrollbar ">
             {casts.map((cast) => (
-              <div className=" mx-3 md:mx-4 h-28 md:h-40">
+              <div className=" mx-1 md:mx-4 h-28 md:h-40">
                 <img
                   src={"https://image.tmdb.org/t/p/w500/" + cast.profile_path}
-                  className=" w-16 md:w-44 object-cover rounded-[50%]"
+                  className=" w-12 md:w-44 object-cover rounded-[50%]"
                 />
                 <p className="flex align-middle font-bold justify-center px-1 md:px-10 w-20 md:w-24 text-sm">
                   {cast.character}
@@ -54,7 +54,7 @@ const GetDetail = () => {
           <h2 className="md:inline-block hidden font-bold py-2">
             {movieDetails?.tagline}
           </h2>
-          <p className=" flex md:w-full w-96 md:py-2 pt-8 ">
+          <p className=" flex md:w-full pr-1 w-96 md:py-2 pt-8 ">
             {movieDetails?.overview}
           </p>
           <div className=" flex justify-between ">
