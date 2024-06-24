@@ -67,7 +67,7 @@ const VideoTitle = ({ movieId, title, overview }) => {
 
   // const firstFiveImage = images.filter((image) => )
   return (
-    <div className="fixed z-40 md:z-10 flex flex-col   md:absolute w-screen md:h-[120%] h-[35%] aspect-video pt-44 md:pt-40 px-8 md:px-12 text-white bg-gradient-to-r from-black">
+    <div className="fixed z-40 md:z-10 flex flex-col   md:absolute w-screen md:h-[120%] h-[42%] aspect-video pt-40 md:pt-40 px-8 md:px-12 text-white bg-gradient-to-r from-black">
       <h1 className=" md:py-2 text-md w-28 md:text-3xl md:w-4/12 font-bold text-gray-400">
         {title}
       </h1>
