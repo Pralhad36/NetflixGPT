@@ -67,13 +67,13 @@ const VideoTitle = ({ movieId, title, overview }) => {
 
   // const firstFiveImage = images.filter((image) => )
   return (
-    <div className="fixed z-40 md:z-10 flex flex-col   md:absolute w-[100%] md:h-[140%] h-[40.4%] aspect-video pt-56 md:pt-80 px-8 md:px-12 text-white bg-gradient-to-r from-black">
-      <h1 className=" md:py-2 text-md w-28 md:text-3xl md:w-4/12 font-bold text-gray-400">
+    <div className="fixed z-40 md:z-10 flex flex-col    md:absolute w-[100%] md:h-[140%] h-[40.4%] aspect-video pt-56 md:pt-80 px-8 md:px-12">
+      <h1 className=" px-2 md:py-2 text-md md:w-96 md:text-3xl   font-bold text-gray-200 bg-gradient-to-r from-black">
         {title}
       </h1>
-      <p className=" hidden md:inline-block text-sm w-4/12 text-gray-200">
+      {/* <p className=" hidden md:inline-block text-md p-2 w-8/12 text-gray-200 bg-gradient-to-r from-black">
         {overview}
-      </p>
+      </p> */}
 
       <div className=" ">
         <button className=" mr-2 px-2 py-0 md:px-10 md:py-2 bg-white bg-opacity-70 text-black md:text-lg text-xs font-bold rounded-lg mx-0 md:mt-2 mt-4  hover:bg-white">
